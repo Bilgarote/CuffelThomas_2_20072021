@@ -1,0 +1,193 @@
+/* Police d'écriture */
+body
+{
+    font-family: 'Raleway', sans-serif;
+    margin:0;
+}
+
+/* Mise en page de l'en-tête */
+
+
+header 
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#top
+{
+    display: flex;
+    justify-content: space-between;       
+    flex-wrap: wrap;
+}
+
+#top img
+{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    margin-top: 11px;
+    top: 0px;
+    left: 0px;
+}
+
+#subscribe
+{
+    color: #0065FC;
+    font-weight: bold;
+    align-self: center;
+    margin-right: 15px;
+    margin-left: 15px;
+    display:flex;
+    justify-content: right;
+    align-items: center;
+    width:100%;
+    height: 75px;
+
+}
+
+/* --- navigation --- */
+
+nav
+{
+    /*background-color: darkolivegreen;*/
+    display: flex;
+    justify-content: space-around;
+    flex-grow:1;    
+}
+
+nav li:hover
+{
+    text-decoration: #0065FC;
+    border-bottom: 4px #0065FC solid ;
+    border-top: 0px ;
+}
+
+nav ul
+{
+    /*background-color: darkorchid;*/
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex: 1;
+    padding: 0;
+}
+
+nav li
+{
+    /*background-color: darkorange;*/
+    display: flex;
+    list-style: none;
+    padding-left: 30px;
+    border-top: 4px transparent solid;
+    border-bottom: 4px transparent solid;
+}
+
+.nav_mobile
+{
+    flex: 1;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* modification des liens sur l'ensemble de la page */
+
+a
+{
+    color:black;
+    outline: none;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #0065FC;
+}
+
+
+
+/* Mise en page du pied de page */
+
+
+footer
+{
+    background-color: #F2F2F2;
+    padding-top:10px;
+}
+
+
+#footerContent{
+    flex-direction: column;
+}
+
+.footerColumn h3
+{
+    padding-left: 2.5em;
+    font-size: 1em;
+}
+
+.footerColumn li 
+{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.footerColumn a:hover
+{
+    color: #0065FC;
+}
+
+/* Si l'écran est > ou = a 800px de large alors ... */
+@media (min-width: 800px)
+{
+
+    /* Modification de l'en-tête */
+    #top
+    {
+        justify-content: end;
+        flex-wrap: nowrap;
+    }
+
+    #top img 
+    {
+
+    }
+    #top a
+    {
+        order: 2;
+    }
+
+    #subscribe
+    {
+        width:auto ;
+    }
+
+    nav 
+    {
+        justify-content: right;
+        flex: 0;
+    }
+
+    nav ul 
+    {
+        align-items: baseline;
+    }
+
+    nav li:hover
+    {
+        text-decoration: #0065FC;
+        border-top: 4px #0065FC solid ;
+        border-bottom: 0px;
+    }
+
+    /* Modification du pied de page */
+
+    #footerContent
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}
