@@ -66,9 +66,9 @@ nav li
 {
     display: flex;
     list-style: none;
-    padding-left: 30px;
+    padding-left: 30px;    
     border-top: 4px transparent solid;
-    border-bottom: 4px transparent solid;
+    border-bottom: 4px #F2F2F2 solid;
 }
 
 .nav_mobile
@@ -78,7 +78,12 @@ nav li
     padding: 10px;
 }
 
-/* modification des liens sur l'ensemble de la page */
+/* modification sur l'ensemble de la page */
+
+main 
+{
+    margin: 15px;
+}
 
 a
 {
@@ -87,6 +92,132 @@ a
     text-decoration: none;
 }
 
+/* Mise en page zone de recherche */
+
+#search
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#search h2
+{
+    margin: initial;
+}
+
+form
+{
+    border-top:2px #F2F2F2 solid;
+    border-bottom:2px #F2F2F2 solid;
+    border-radius: 15px;
+    max-width: 400px;
+    display:flex;
+}
+
+label
+{
+    padding: 15px;
+    background-color: #F2F2F2;
+    border-radius: 15px 0 0 15px;
+}
+
+
+input 
+{
+    padding:10px;
+    font-weight: bold;
+    border: none;
+    flex:2;
+}
+
+input:focus{
+    outline: none;
+}
+
+input::placeholder
+{
+    color: black;
+    font-size: 1.2em;
+    text-align: left;
+    opacity: 1;
+}
+
+button
+{
+
+    background: #0065FC;
+    color: white;
+    padding: 10px;
+    border: 1px transparent solid;
+    border-radius: 15px;
+    text-shadow:none;
+    cursor: pointer; 
+}
+
+#hide
+{
+    display:none;
+}
+
+/* Mise en page zone recherche */
+
+#filter ul
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 60%;
+}
+#filter li 
+{
+    list-style: none;
+    margin: 2px;
+}
+
+
+
+.icon
+{
+    text-align: center;
+    padding:15px;
+    background: #DEEBFF;
+    color: #0065FC;
+    border-radius: 100%;
+}
+
+.buttonFilter
+{
+    color:initial;
+    background: transparent;
+    padding: 0;
+    border-bottom: 2px #F2F2F2 solid;
+    border-top: 2px #F2F2F2 solid;
+    border-right: 2px #F2F2F2 solid;
+    border-radius: 25px;
+}
+
+.buttonFilter:hover
+{
+    background: #DEEBFF;
+    color:#0065FC;
+}
+
+.textFilter
+{
+    margin: 20px;
+}
+
+#info i
+{
+    text-align: center;
+    padding:10px;
+    margin-right: 15px;
+    height: 20px;
+    width: 20px;
+    color: #0065FC;
+    border: 1px #F2F2F2 solid;
+    border-radius: 100%;
+}
 
 /* Mise en page du pied de page */
 
@@ -119,6 +250,7 @@ footer
     color: #0065FC;
 }
 
+
 /* Si l'écran est > ou = a 800px de large alors ... */
 @media (min-width: 800px)
 {
@@ -142,7 +274,7 @@ footer
 
     nav 
     {
-        justify-content: right;
+        justify-content: flex-end;
         flex-basis: 100%;
     }
 
@@ -151,6 +283,11 @@ footer
         flex: initial;
         padding: initial;
         margin: 0;
+    }
+
+    nav li
+    {
+        border-bottom: 4px transparent solid;
     }
 
     nav li:hover
@@ -165,6 +302,30 @@ footer
         padding: 20px;
     }
 
+    /* Modification zone de recherche */
+
+    form
+    {
+        max-width: 400px;
+    }
+
+    i.hideIcon.fas.fa-search.fa-lg {
+        display: none;
+    }
+
+    #hide
+    {
+        display: contents;
+    }
+
+    /* Modification filtre */
+
+    #filter ul 
+    {
+        max-width: 700px;
+        width: auto;
+    }
+
     /* Modification du pied de page */
 
     #footerContent
@@ -173,5 +334,4 @@ footer
         flex-direction: row;
         justify-content: space-around;
     }
-
 }
