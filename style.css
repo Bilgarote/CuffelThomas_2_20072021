@@ -1,4 +1,4 @@
-/* Police d'écriture */
+/* Font */
 
 body
 {
@@ -7,7 +7,7 @@ body
 }
 
 
-/* Mise en page de l'en-tête */
+/* ----- header layout ----- */
 
 
 header 
@@ -26,7 +26,7 @@ header img
 
 }
 
-#subscribe
+#signUp
 {
     color: #0065FC;
     font-weight: bold;
@@ -38,47 +38,55 @@ header img
 
 /* --- navigation --- */
 
-nav
+#navHead
 {
     display: flex;
     justify-content: space-around;
     flex-basis: 100%;    
 }
 
-nav li:hover
+#navHead li:hover
 {
-    border-bottom: 4px #0065FC solid ;
+    border-bottom: 2px #0065FC solid ;
 }
 
-nav li:hover a
+#navHead li:hover a
 {
     color: #0065FC;
 }
 
-nav ul
+#navHead ul
 {
     display: flex;
     flex: 1;
     padding: 0;
 }
 
-nav li
+#navHead li
 {
     display: flex;
-    list-style: none;
-    padding-left: 30px;    
-    border-top: 4px transparent solid;
-    border-bottom: 4px #F2F2F2 solid;
+    list-style: none;  
+    border-top: 2px transparent solid;
+    border-bottom: 2px #F2F2F2 solid;
 }
 
-.nav_mobile
+.menu
 {
     flex: 1;
     justify-content: center;
-    padding: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+    width: 100%
 }
 
-/* modification sur l'ensemble de la page */
+.menu a
+{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+/* ----- modification on the whole page ----- */
 
 main 
 {
@@ -92,7 +100,7 @@ a
     text-decoration: none;
 }
 
-/* Mise en page zone de recherche */
+/* ----- search area layout ----- */
 
 #search
 {
@@ -159,14 +167,24 @@ button
     display:none;
 }
 
-/* Mise en page zone recherche */
+/* ----- filter area layout ----- */
+
+#filter
+{
+    display:flex;
+    flex-direction: column;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
 
 #filter ul
 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 60%;
+    padding: initial;
+    margin-top: 10px;
 }
 #filter li 
 {
@@ -194,6 +212,7 @@ button
     border-top: 2px #F2F2F2 solid;
     border-right: 2px #F2F2F2 solid;
     border-radius: 25px;
+    font-weight: bold;
 }
 
 .buttonFilter:hover
@@ -205,6 +224,12 @@ button
 .textFilter
 {
     margin: 20px;
+}
+
+#info
+{
+    display: flex;
+    align-items: baseline;
 }
 
 #info i
@@ -219,13 +244,56 @@ button
     border-radius: 100%;
 }
 
-/* Mise en page du pied de page */
+/* ----- Mise en page zone hébergement ----- */ 
+
+#liste ul
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#liste li
+{
+    list-style: none;
+    margin: 2px;
+    flex-basis: 50%;
+}
+
+#liste h4, #liste p 
+{
+    margin: 5px;
+}
+
+#liste img
+{
+    height: 50%;
+    width: 100%;
+}
+
+.bleu
+{
+    color: #0065FC;
+}
+
+.gris
+{
+    color: silver;
+}
+
+.bold
+{
+    font: bold;
+}
+
+/* ----- footer layout ----- */
 
 
 footer
 {
     background-color: #F2F2F2;
-    padding-top:10px;
+    padding-top:20px;
+    padding-bottom: 20px;
 }
 
 
@@ -251,11 +319,11 @@ footer
 }
 
 
-/* Si l'écran est > ou = a 800px de large alors ... */
-@media (min-width: 800px)
+/* If the screen is > or = 800px wide then ... */
+@media screen and (min-width: 800px)
 {
 
-    /* Modification de l'en-tête */
+    /* ----- header layout ----- */
 
     header
     {
@@ -272,37 +340,40 @@ footer
         height: initial;
     }
 
-    nav 
+    #navHead 
     {
         justify-content: flex-end;
         flex-basis: 100%;
     }
 
-    nav ul 
+    #navHead ul 
     {
         flex: initial;
         padding: initial;
         margin: 0;
     }
 
-    nav li
+    n#navHead li
     {
         border-bottom: 4px transparent solid;
     }
 
-    nav li:hover
+    #navHead li:hover
     {
         text-decoration: #0065FC;
-        border-top: 4px #0065FC solid ;
+        border-top: 2px #0065FC solid ;
         border-bottom: 0px;
     }
 
-    .nav_mobile
+    .menu a
     {
-        padding: 20px;
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
-    /* Modification zone de recherche */
+    /* ----- modification search area ----- */
 
     form
     {
@@ -318,20 +389,37 @@ footer
         display: contents;
     }
 
-    /* Modification filtre */
+    /* ----- modification filter area ----- */
+
+    #filter
+    {
+        flex-direction: row;
+        align-items: baseline;
+        flex-wrap: wrap;
+    }
 
     #filter ul 
     {
         max-width: 700px;
         width: auto;
+        margin-left: 15px;
     }
 
-    /* Modification du pied de page */
+    #info
+    {
+        flex-basis: 100%;
+    }
+
+    /* ----- modification footer ----- */
 
     #footerContent
     {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+    }
+
+    .footerColumn
+    {
+        flex-basis: 33%;
     }
 }
