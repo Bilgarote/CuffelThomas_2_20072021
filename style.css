@@ -148,6 +148,12 @@ input::placeholder
     font-family: 'Raleway', sans-serif;
 }
 
+::-webkit-input-placeholder /* Chrome/Opera/Safari */
+{
+    color: black;
+    font-size: 1.2em;
+}
+
 button
 {
     background: #0065FC;
@@ -446,6 +452,11 @@ footer
         margin: initial;
     }
 
+    .textFilter
+    {
+        margin: 15px;
+    }
+
     #info
     {
         margin: initial;
@@ -479,7 +490,7 @@ footer
         margin: 8px;
     }
 
-    #footerContent
+    #footerContainer
     {
         display: flex;
         flex-direction: row;
@@ -691,10 +702,20 @@ footer
         margin: 0 10px 0 10px;
     }
 
-    #activity img 
+    #activity .fullColumn img 
+    {
+        height:100%;
+    }
+
+    /*.midColumn img 
+    {
+        height: 60%;
+    }*/
+
+    /*#activity img 
     {
         height: 100%;
-    }
+    }*/
 
     /* ----- modification footer ----- */
 
