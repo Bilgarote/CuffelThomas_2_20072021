@@ -1,3 +1,5 @@
+/* layout mobile first width-max: 768px */
+
 /* Font */
 
 body
@@ -31,6 +33,7 @@ header img
     color: #0065FC;
     font-weight: bold;
     margin-right: 15px;
+    margin-top: 5px;
     display:flex;
     align-items: center;
     height: 75px;
@@ -88,11 +91,6 @@ header img
 
 /* ----- modification on the whole page ----- */
 
-main 
-{
-    margin: 15px;
-}
-
 a
 {
     color: initial;
@@ -106,6 +104,7 @@ a
 {
     display: flex;
     flex-direction: column;
+    margin: 15px;
 }
 
 #search h2
@@ -144,18 +143,16 @@ input:focus{
 
 input::placeholder
 {
-    color: black;
     font-size: 1.2em;
-    text-align: left;
     opacity: 1;
+    font-family: 'Raleway', sans-serif;
 }
 
 button
 {
-
     background: #0065FC;
     color: white;
-    padding: 10px;
+    padding: 15px;
     border: 1px transparent solid;
     border-radius: 15px;
     text-shadow:none;
@@ -175,14 +172,13 @@ button
     flex-direction: column;
     align-items: baseline;
     flex-wrap: wrap;
-    margin-top: 15px;
+    margin: 15px;
 }
 
 #filter ul
 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     padding: initial;
     margin-top: 10px;
 }
@@ -191,8 +187,6 @@ button
     list-style: none;
     margin: 2px;
 }
-
-
 
 .icon
 {
@@ -244,31 +238,65 @@ button
     border-radius: 100%;
 }
 
-/* ----- Mise en page zone hébergement ----- */ 
+/* ----- popular layout ----- */ 
 
-#liste ul
+#popular
+{
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 15px 15px 50px 15px;
+}
+
+#popular article
+{
+    width: 100%;
+}
+
+#popular a
+{
+    display: flex;
+    height: 150px;
+    border: 5px solid white;
+    border-radius: 25px;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 0 0px 15px silver;
+}
+
+#popular img
+{
+    border-radius: 25px 0 0 25px;
+    object-fit: cover;
+    width: 40%;
+}
+
+.margin
+{
+    margin: 15px;
+}
+
+.popular_info
 {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 60%;
+    padding-right: 5px;
+
 }
 
-#liste li
+.popular_info h4, .popular_info p 
 {
-    list-style: none;
-    margin: 2px;
-    flex-basis: 50%;
+    margin: 10px 0 5px 15px;
+    font-size: 0.8em;
 }
 
-#liste h4, #liste p 
+.spaceBetween 
 {
-    margin: 5px;
-}
-
-#liste img
-{
-    height: 50%;
-    width: 100%;
+    flex-basis: 100%;
 }
 
 .bleu
@@ -281,10 +309,84 @@ button
     color: silver;
 }
 
+/* ----- accommodation layout ----- */
+
+#liste
+{
+    margin: 15px;
+}
+
+#liste a
+{
+    display: flex;
+    height: 200px;
+    border: 5px solid white;
+    border-radius: 25px;
+    margin: 20px 0px 10px 0px;
+    background-color: white;
+    box-shadow: 0 0px 15px silver;
+    flex-direction: column;
+}
+
+#liste img
+{
+    border-radius: 25px 25px 0 0;
+    object-fit: cover;
+    width: 100%;
+    height: 60%;
+}
+
+#liste article h4, #liste article p 
+{
+    margin: 8px 0 0 15px;
+    font-size: 0.8em;
+}
+
 .bold
 {
-    font: bold;
+    font-weight: bold;
 }
+
+#more
+{
+    padding: 20px 0 20px 0;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* ----- activity layout ----- */
+
+#activity
+{
+    margin: 15px 15px 50px 15px;
+}
+
+.fullColumn a, .midColumn a
+{
+    display: flex;
+    height: 150px;
+    border-radius: 25px;
+    margin: 20px 0px 10px 0px;
+    background-color: white;
+    box-shadow: 0 0px 15px silver;
+    flex-direction: column;
+}
+
+#activity img
+{
+    border-radius: 25px 25px 0 0;
+    object-fit: cover;
+    width: 100%;
+    height: 60%;
+}
+
+#activity h4
+{
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+}
+
 
 /* ----- footer layout ----- */
 
@@ -318,12 +420,90 @@ footer
     color: #0065FC;
 }
 
+/* Tablette -- If the screen is > or = 768px and is < or = 1023px wide then ... */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1023px)
+{
+    h2
+    {
+        flex-basis: 100%;
+    }
 
-/* If the screen is > or = 800px wide then ... */
-@media screen and (min-width: 800px)
+    /* ----- modification filter area ----- */
+
+    #filter
+    {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    
+    #filter ul 
+    {
+        margin-left: 10px;
+    }
+
+    #filter li 
+    {
+        margin: initial;
+    }
+
+    #info
+    {
+        margin: initial;
+        font-size: 0.9em;
+        flex-basis: 100%;
+    }
+
+    #more 
+    {
+        padding: 0 0 0 20px;
+    }
+ 
+    /* ----- modification popular ----- */ 
+
+    #popular h2 
+    {
+        flex-basis:75%;
+    }
+    
+    /* ----- modification accommodation ----- */
+    section
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    article 
+    {
+        flex-basis: 31%;
+        margin: 8px;
+    }
+
+    #footerContent
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footerColumn
+    {
+        flex-basis: 33%;
+    }
+
+}
+
+
+/* Desktop -- If the screen is > or = 1024px wide then ... */
+@media screen and (min-width: 1024px)
 {
 
     /* ----- header layout ----- */
+
+    header, main
+    {
+        max-width: 1280px;
+        margin: auto;
+    }
 
     header
     {
@@ -335,9 +515,14 @@ footer
         order: 2;
     }
 
-    #subscribe
+    #signUp
     {
-        height: initial;
+       height: initial;
+    }
+
+    #signUp
+    {
+        padding-left: 25px;
     }
 
     #navHead 
@@ -353,7 +538,7 @@ footer
         margin: 0;
     }
 
-    n#navHead li
+    #navHead li
     {
         border-bottom: 4px transparent solid;
     }
@@ -361,7 +546,7 @@ footer
     #navHead li:hover
     {
         text-decoration: #0065FC;
-        border-top: 2px #0065FC solid ;
+        border-top: 2px #0065FC solid;
         border-bottom: 0px;
     }
 
@@ -369,8 +554,8 @@ footer
     {
         display: flex;
         align-items: center;
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: 25px;
+        padding-left: 25px;
     }
 
     /* ----- modification search area ----- */
@@ -389,6 +574,12 @@ footer
         display: contents;
     }
 
+    button 
+    {
+        font-weight: bold;
+        border-radius: 0 15px 15px 0;
+    }
+
     /* ----- modification filter area ----- */
 
     #filter
@@ -396,6 +587,7 @@ footer
         flex-direction: row;
         align-items: baseline;
         flex-wrap: wrap;
+        margin: 0 15px 0 15px;
     }
 
     #filter ul 
@@ -408,18 +600,123 @@ footer
     #info
     {
         flex-basis: 100%;
+        margin: 0;
     }
 
-    /* ----- modification footer ----- */
+    /* ----- modification contents ----- */
 
-    #footerContent
+    #contents
     {
         display: flex;
         flex-direction: row;
     }
 
+    #popular
+    {
+        order: 2;
+        flex-basis: 40%;
+        border-radius: 25px;
+        margin: 15px;
+        padding: 15px;
+    }
+
+    #popular h2
+    {
+        flex-basis: 75%;
+    }
+
+    #popular a 
+    {
+        height: 125px;
+    }
+
+    #liste
+    {
+        flex-basis: 70%;
+        background-color: #F2F2F2; 
+        border-radius: 25px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 15px;
+        padding: 15px;
+    }
+
+    #liste h2
+    {
+        flex-basis: 100%;
+    }
+
+    #liste article
+    {
+        width: 32%;
+    }
+
+    #more 
+    {
+        flex-basis: 100%;
+        padding: initial;
+    }
+
+    /* ----- modification activity area ----- */
+
+    #layoutActivity
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 325px;
+        justify-content: space-between;
+    }
+
+    .fullColumn
+    {
+        flex-basis: 100%;
+        width: 25%;
+    }
+
+    .midColumn
+    {
+        width: 25%;
+    }
+
+    .fullColumn a 
+    {
+        height: 100%;
+    }
+
+    .fullColumn a, .midColumn a
+    {
+        margin: 0 10px 0 10px;
+    }
+
+    #activity img 
+    {
+        height: 100%;
+    }
+
+    /* ----- modification footer ----- */
+
+    #footerContainer
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
     .footerColumn
     {
         flex-basis: 33%;
+    }
+}
+
+/* 4K Desktop -- If the screen is > 1921px wide then ... */
+@media screen and (min-width: 1921px)
+{
+    #footerContainer
+    {
+        max-width: 1280px;
+        margin: auto;
     }
 }
