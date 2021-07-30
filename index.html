@@ -18,7 +18,7 @@
                 <img src="images/logo/Reservia.svg" alt="Logo Reservia" />    
                 <a href="#" id="signUp">S'inscrire</a>
             
-                <nav id="navHead">
+                <nav aria-label id="navHead">
                     <ul>
                         <li class="menu"><a href="#contents" >Hébergements</a></li>
                         <li class="menu"><a href="#activity" >Activités</a></li>
@@ -35,11 +35,11 @@
                 <p>En plein centre ville ou pleine nature</p>
                 <form>
                     <label for="lieu">
-                        <i class="fas fa-map-marker-alt fa-sm"></i>
+                        <span class="fas fa-map-marker-alt fa-sm"></span>
                     </label>
                     <input type="text" name="lieu" id="lieu" placeholder="Marseille, France" >
                     <button>
-                        <i class="hideIcon fas fa-search fa-lg"></i>
+                        <span class="hideIcon fas fa-search fa-lg"></span>
                         <span id="hide"> Rechercher </span>
                     </button>
                 </form>
@@ -49,20 +49,20 @@
             <section id="filter">
                 <h3>Filtres</h3>
                 <ul>
-                    <li><button class="buttonFilter"><i class="icon fas fa-money-bill-wave"></i><span class="textFilter">Économique</span></button></li>
-                    <li><button class="buttonFilter"><i class="icon fas fa-child"></i><span class="textFilter">Familial</span></button></li>
-                    <li><button class="buttonFilter"><i class="icon fas fa-heart"></i><span class="textFilter">Romantique</span></button></li>
-                    <li><button class="buttonFilter"><i class="icon fas fa-dog"></i><span class="textFilter">Animaux autorisés</span></button></li>
+                    <li><button class="buttonFilter"><span class="icon fas fa-money-bill-wave"></span><span class="textFilter">Économique</span></button></li>
+                    <li><button class="buttonFilter"><span class="icon fas fa-child"></span><span class="textFilter">Familial</span></button></li>
+                    <li><button class="buttonFilter"><span class="icon fas fa-heart"></span><span class="textFilter">Romantique</span></button></li>
+                    <li><button class="buttonFilter"><span class="icon fas fa-dog"></span><span class="textFilter">Animaux autorisés</span></button></li>
                 </ul>
-                <p id="info"><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+                <p id="info"><span class="fas fa-info"></span>Plus de 500 logements sont disponibles dans cette ville</p>
             </section>
 
             <!-- contents -->
-            <section id="contents">
+            <div id="contents">
                 <!-- most popular area -->
                 <section id="popular">
                     <h2>Les plus populaires</h2>
-                    <i class="fas fa-chart-line fa-lg"></i>
+                    <span class="fas fa-chart-line fa-lg"></span>
                         <article>
                             <a href="#" >
                                 <img class="popular_img" src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="photo accommodation" />
@@ -70,11 +70,11 @@
                                     <h4>Hôtel Le soleil du matin</h4>
                                     <p class="spaceBetween">Nuit à partir de <span class="bold">128€</span></p>
                                     <p>
-                                        <i class="bleu fas fa-star"></i>
-                                        <i class="bleu fas fa-star"></i>
-                                        <i class="bleu fas fa-star"></i>
-                                        <i class="bleu fas fa-star"></i>
-                                        <i class="bleu fas fa-star"></i>
+                                        <span class="bleu fas fa-star"></span>
+                                        <span class="bleu fas fa-star"></span>
+                                        <span class="bleu fas fa-star"></span>
+                                        <span class="bleu fas fa-star"></span>
+                                        <span class="bleu fas fa-star"></span>
                                     </p>
                                 </div>
                             </a>
@@ -86,11 +86,11 @@
                                     <h4>Au coeur de l'eau Chambres d'hôtes</h4>
                                     <p class="spaceBetween">Nuit à partir de <span class="bold">71€</span></p>
                                     <p>
-                                        <i class="bleu fas fa-star"></i>
-                                        <i class="bleu fas fa-star"></i>
-                                        <i class="bleu fas fa-star"></i>
-                                        <i class="bleu fas fa-star"></i>
-                                        <i class="gris fas fa-star"></i>
+                                        <span class="bleu fas fa-star"></span>
+                                        <span class="bleu fas fa-star"></span>
+                                        <span class="bleu fas fa-star"></span>
+                                        <span class="bleu fas fa-star"></span>
+                                        <span class="gris fas fa-star"></span>
                                     </p>
                                 </div>
                             </a>
@@ -102,11 +102,11 @@
                                     <h4>Hôtel Tout bleu et Blanc</h4>
                                     <p class="spaceBetween">Nuit à partir de <span class="bold">68€</span></p>
                                     <p>
-                                        <i class="bleu fas fa-star"></i>
-                                        <i class="bleu fas fa-star"></i>
-                                        <i class="bleu fas fa-star"></i>
-                                        <i class="bleu fas fa-star"></i>
-                                        <i class="gris fas fa-star"></i>
+                                        <span class="bleu fas fa-star"></span>
+                                        <span class="bleu fas fa-star"></span>
+                                        <span class="bleu fas fa-star"></span>
+                                        <span class="bleu fas fa-star"></span>
+                                        <span class="gris fas fa-star"></span>
                                     </p>
                                 </div>
                             </a>
@@ -122,11 +122,11 @@
                             <h4>Auberge la Cannebière</h4>
                             <p>Nuit à partir de <span class="bold">25€</span></p>
                             <p>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="gris fas fa-star"></i>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="gris fas fa-star"></span>
                             </p>
                         </a>
                     </article>
@@ -136,11 +136,11 @@
                             <h4>Hôtel du port</h4>
                             <p>Nuit à partir de <span class="bold">52€</span></p>
                             <p>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
                             </p>
                         </a>
                     </article>
@@ -150,11 +150,11 @@
                             <h4>Hôtel Les mouettes</h4>
                             <p>Nuit à partir de <span class="bold">76€</span></p>
                             <p>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="gris fas fa-star"></i>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="gris fas fa-star"></span>
                             </p>
                         </a>
                     </article>
@@ -164,11 +164,11 @@
                             <h4>Hôtel de la mer</h4>
                             <p>Nuit à partir de <span class="bold">46€</span></p>
                             <p>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="gris fas fa-star"></i>
-                                <i class="gris fas fa-star"></i>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="gris fas fa-star"></span>
+                                <span class="gris fas fa-star"></span>
                             </p>
                         </a>
                     </article>
@@ -178,11 +178,11 @@
                             <h4>Auberge Le Panier</h4>
                             <p>Nuit à partir de <span class="bold">23€</span></p>
                             <p>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="gris fas fa-star"></i>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="gris fas fa-star"></span>
                             </p>
                         </a>
                     </article>
@@ -192,22 +192,22 @@
                             <h4>Hôtel chez Amina</h4>
                             <p>Nuit à partir de <span class="bold">96€</span></p>
                             <p>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
-                                <i class="bleu fas fa-star"></i>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
+                                <span class="bleu fas fa-star"></span>
                             </p>
                         </a>
                     </article>
                     <p id="more">Afficher plus</p>
                 </section>
-            </section>
+            </div>
             
             <!-- activity area -->
             <section id="activity">
                 <h2>Activités à Marseille</h2>
-                <section id="layoutActivity">
+                <div id="layoutActivity">
                     <article class="fullColumn">
                         <a href=#>
                             <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="photo accommodation" />
@@ -244,14 +244,14 @@
                             <h4>Parc Longchamp</h4>
                         </a>
                     </article>
-                </section>
+                </div>
             </section>
         </main>
 
         <!-- page footer -->
         <footer id="footerContent">
             <div id="footerContainer">
-                <nav class="footerColumn">
+                <nav aria-label class="footerColumn">
                     <h3>A propos</h3>
                     <ul>
                         <li><a href="">Fonctionnement du site</a></li>
@@ -259,14 +259,14 @@
                         <li><a href="">Données et confidentialité</a></li>
                     </ul>
                 </nav>
-                <nav class="footerColumn">
+                <nav aria-label class="footerColumn">
                     <h3>Nos hébergements</h3>
                     <ul>
                         <li><a href="">Charte qualité</a></li>
                         <li><a href="">Soumettre votre hôtel</a></li>
                     </ul>
                 </nav>
-                <nav class="footerColumn">
+                <nav aria-label class="footerColumn">
                     <h3>Assitance</h3>
                     <ul>
                         <li><a href="">Centre d'aide</a></li>
