@@ -491,7 +491,7 @@ footer {
     max-width: 400px;
   }
 
-  i.hideIcon.fas.fa-search.fa-lg {
+  span.hideIcon.fas.fa-search.fa-lg {
     display: none;
   }
 
